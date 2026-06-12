@@ -1,0 +1,25 @@
+# Dataset (regenerate with prepare_dataset.py)
+data/plantvillage_yolo/
+data/archive/
+data/archive.zip
+
+# Training runs — keep best.pt out of git history except a curated copy in weights/
+runs/
+*.pt
+!weights/best.pt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Scratch / unsorted source media (kept locally, not pushed)
+test img from internet/
+
+# OS
+.DS_Store
+Thumbs.db

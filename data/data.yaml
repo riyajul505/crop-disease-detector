@@ -1,0 +1,26 @@
+# PlantVillage (15-class subset: bell pepper, potato, tomato) config for YOLOv8.
+# Generated splits: 70% train / 20% val / 10% test (see prepare_dataset.py).
+# NOTE: `path` must be absolute — Ultralytics resolves relative paths against
+# its global datasets_dir, not this file. prepare_dataset.py rewrites it.
+
+path: C:\Users\rlriy\Downloads\Upwork Projects\crop-disease-detector\data\plantvillage_yolo
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: Bell pepper — Bacterial spot
+  1: Bell pepper — healthy
+  2: Potato — Early blight
+  3: Potato — healthy
+  4: Potato — Late blight
+  5: Tomato — Bacterial spot
+  6: Tomato — Early blight
+  7: Tomato — healthy
+  8: Tomato — Late blight
+  9: Tomato — Leaf mold
+  10: Tomato — Septoria leaf spot
+  11: Tomato — Spider mites
+  12: Tomato — Target spot
+  13: Tomato — Mosaic virus
+  14: Tomato — Yellow leaf curl virus

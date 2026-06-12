@@ -1,0 +1,27 @@
+# Training hyperparameters for PlantVillage fine-tuning.
+# Passed to model.train() via train.py (--config). Anything here overrides
+# Ultralytics defaults; anything not listed keeps the library default.
+
+epochs: 50
+imgsz: 640
+batch: 16
+patience: 10          # early stopping (epochs without val improvement)
+optimizer: auto       # AdamW chosen automatically for fine-tuning
+lr0: 0.001            # initial learning rate (lower than scratch-training default)
+lrf: 0.01             # final LR fraction (cosine schedule end = lr0 * lrf)
+warmup_epochs: 3
+weight_decay: 0.0005
+dropout: 0.0
+
+# Augmentation — moderate; PlantVillage images are studio-style single leaves,
+# so heavy mosaic/perspective hurts more than it helps.
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 10.0
+translate: 0.1
+scale: 0.3
+fliplr: 0.5
+flipud: 0.2
+mosaic: 0.5
+mixup: 0.0
